@@ -1,26 +1,24 @@
 <?php
 
-namespace app\models\Party;
+namespace app\models\User;
 
-use Yii;
 use yii\db\ActiveRecord;
 
 /**
- * This is the model class for table "party".
+ * This is the model class for table "user".
  *
  * @property int $id
- * @property string $name
  * @property string $email
- * @property string $document
+ * @property string $password
  */
-class Party extends ActiveRecord
+class User extends ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'party';
+        return 'user';
     }
 
     /**
@@ -29,9 +27,8 @@ class Party extends ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'email', 'document'], 'required'],
-            [['name', 'email'], 'string', 'max' => 100],
-            [['document'], 'string', 'max' => 20],
+            [['email', 'password'], 'required'],
+            [['email', 'password'], 'string', 'max' => 100],
         ];
     }
 
@@ -42,9 +39,8 @@ class Party extends ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Nome',
             'email' => 'Email',
-            'document' => 'CPF',
+            'password' => 'Senha',
         ];
     }
 }

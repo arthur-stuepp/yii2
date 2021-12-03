@@ -23,7 +23,7 @@ class PartyModel extends Model
         return [
             'name' => 'Nome',
             'email' => 'Email',
-            'document' => 'CNPJ',
+            'document' => 'CPF',
         ];
     }
 
