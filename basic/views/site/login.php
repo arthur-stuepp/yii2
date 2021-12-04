@@ -38,5 +38,9 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
         </div>
 
+    <div class="offset-lg-1" style="color:#999;">
+       Login Padrão <strong>Admin/Admin</strong>
+    </div>
+
     <?php ActiveForm::end(); ?>
 </div>
